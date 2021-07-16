@@ -15,8 +15,16 @@ text.addEventListener('input',function(){
 const email=document.querySelector('#email');
 const emailError=document.querySelector('.email-error');
 email.addEventListener('input',function(){
-let emailregex=RegExp("[A-Za-z0-9]{3,}[.]{1}[A-Za-z0-9]{3,}[@]{1}[A-Za-z]{4,}[.]{1}[a-z]{3,}")
+let emailregex=RegExp("^[A-Za-z0-9]{3,}[.]{1}[A-Za-z0-9]{3,}[@]{1}[A-Za-z]{4,}[.]{1}[a-z]{3,}$")
 if(emailregex.test(email.value))
 emailError.textContent="";
 else emailError.textContent="Invalid Email";
+});
+const number=document.querySelector('#number');
+const numberError=document.querySelector('.number-error');
+number.addEventListener('input',function(){
+    let numberregex=RegExp("[0-9]{2}[-]{1}[0-9]{10}")
+    if(numberregex.test(number.value))
+    numberError.textContent="";
+    else numberError.textContent="Invalid Number";
 })
