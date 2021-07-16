@@ -23,8 +23,16 @@ else emailError.textContent="Invalid Email";
 const number=document.querySelector('#number');
 const numberError=document.querySelector('.number-error');
 number.addEventListener('input',function(){
-    let numberregex=RegExp("[0-9]{2}[-]{1}[0-9]{10}")
+    let numberregex=RegExp("[0-9]{2}[ ]{1}[0-9]{10}")
     if(numberregex.test(number.value))
     numberError.textContent="";
     else numberError.textContent="Invalid Number";
+});
+const password=document.querySelector('#pwd');
+const passwordError=document.querySelector('.password-error')
+password.addEventListener('input',function(){
+    let pwdregex=RegExp("^[A-Za-z0-9]{8,}$")
+    if(pwdregex.test(password.value))
+    passwordError.textContent=""
+    else passwordError.textContent="Invalid email"
 })
