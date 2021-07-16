@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Input</title>
+    <link rel="stylesheet" href="..\css\inputandform.css">
+    <script defer src="..\js\inputandoutput.js"></script>
+    </head>
+    <body>
+        <form>
+            <header class="headerContainer"><h1>HTML 5 Form Input Feilds</h1></header>
+            <div>
+                <label for="text">Enter the Name</label>
+                <input type="text" id="text" name="text">
+                <error-output class="text-error" for="text"></error-output>
+            </div>
+            <div>
+                <label for="pwd">Enter the Password</label>
+                <input type="password" id="pwd" name="pwd">
+            </div>
+            <div>
+                <label for="email">Enter the Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div>
+                <label for="url">Enter the url</label>
+                <input type="url" id="url" name="url">
+            </div>
+            <div>
+                <label for="number">Enter the Mobilenumber</label>
+                <input type="number" id="number" name="number">
+            </div>
+            <div>
+                <label for="tel">Enter the Telephone number</label>
+                <input type="tel" id="tel" name="tel">
+            </div>
+            <div>
+                <label for="search">Enter the search type</label>
+                <input type="search" id="search" name="search">
+            </div>
+            <div class="datecontainer">
+                <label for="date">Enter the Date and time</label>
+                <input type="datetime-local" id="date" name="date">
+            </div>
+            <div>
+                <label for="salary">Choose the Salary</label>
+                <input type="range" id="salary" name="salary" min="200000"
+                 max="500000" step="100" value="600000">
+                 <output class="salary-output" for="salary">500000</output>
+            </div>
+            <div>
+                <button>Submit</button>
+            </div>
+
+        </form>
+
+    </body>
+</html>
